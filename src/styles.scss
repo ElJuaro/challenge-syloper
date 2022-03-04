@@ -1,0 +1,276 @@
+/* You can add global styles to this file, and also import other style files */
+$color-primary: rgb(2, 30, 52);
+
+body{
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.full-width{
+    width:100%
+}
+header{
+    background-color: $color-primary;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    position: absolute;
+    top:0;
+    left:0;
+    height:64px;
+    width: 100%;
+    z-index:10px;
+    transition: top 0.2s linear;
+
+    form{
+    display:flex;
+    }
+
+    nav{
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 40px;
+    }
+
+    div.content{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    div.first-div{
+        display:flex;;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        align-items: center;
+        overflow: visible;
+    }
+
+    div.second-div{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+
+
+.container{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding-bottom:50px
+
+}
+  
+footer{
+    bottom: 0;
+    background-color: $color-primary;
+    max-width: 100%;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 0px;
+    background-position:center top;
+    background-size: cover;
+    background-repeat:no-repeat;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-between;
+    justify-content: center;
+
+
+    a{
+        color:rgb(232,230,227);
+        text-decoration-color:initial;
+        text-decoration: none;
+        background: transparent;;
+    }
+
+    nav{
+    font-size: .9em;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 40px;
+        div{
+            margin-right: 40px;
+            min-width: 0;
+            box-sizing: border-box;
+        }
+        .img-text{
+            text-align: right;
+            position: relative;
+            top: -36px;
+            right:0px;
+            img{
+                width: 130px;
+                height:94px;
+                display:block;
+                top:0;
+                right:0;
+            }
+            a.text{
+                position: relative;
+                top: 20px;
+                right: 110px;
+                font-size:1.3em;
+                font-weight: bold;
+                display:inline-block;
+                word-wrap: break-word;
+                white-space:normal;
+                text-transform: uppercase;
+                border: 2px solid #fff;
+                border-radius: 5px;
+                padding: 8px 16px;
+                transition: linear .1s;
+                border-color: rgb(48,52,54);
+                background-color: rgb(24,26,27);
+                color: rgb(45,210,254);
+                }            
+        }
+        h3{
+            font-weight:bold;
+            font-size: 1.4em;
+            line-height: 1.4em;
+            text-transform: uppercase;
+            white-space: nowrap;
+            margin: 0%;
+        }
+        ul{
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+            margin: 0px;
+            padding: 0px;
+
+            li{
+                line-height: 1,6em;
+                max-width: 260px;
+                white-space:nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        } 
+    }
+
+}
+
+
+a{
+    text-decoration: none;
+}
+
+i{
+    color:black
+}
+
+.mt-x{
+    margin: 6rem 8rem 0 8rem ;  
+    h1{
+                position: relative;
+                left: 115px;
+                font-size:1.3em;
+                font-weight: bold;
+                display:inline-block;
+                word-wrap: break-word;
+                white-space:normal;
+                text-transform: uppercase;
+                border: 2px solid #fff;
+                border-radius: 5px;
+                padding: 8px 16px;
+                transition: linear .1s;
+                border-color: rgb(48,52,54);
+                background-color: rgb(24,26,27);
+                color: rgb(45,210,254);
+                          
+    }
+    .div-carousel{
+        width:100%;
+    }
+    .div-cards{
+        width:100%;
+    }
+} 
+
+
+.carousel{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    height:400px;
+    margin: 0 12.3rem 0 9rem;
+    ngb-carousel{
+        width: 100%;
+    }
+    div{
+        height:100%;      
+    }
+    img{
+        width:100%;
+        height:100%
+    }
+    .info{
+        height: 150px;
+        position: absolute;
+        bottom: 0;
+        padding-top: 1.25rem;
+        background-color: rgba(7, 4, 4, 0.473);
+        h3{
+            font-weight: bold;
+            font-size: 1.4em;
+            line-height: 1.4em;
+            text-transform: uppercase;
+            white-space: nowrap;
+            margin: 0 10px;
+        }
+        p{
+            color: rgb(216, 212, 207);
+            margin: 0 10px;
+        }
+        
+    }
+    .box{
+        position: relative;
+        img{
+            height: 100%;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+    }
+}
+
+.cards{
+    display:flex;
+    padding: 130px;
+    flex-wrap:wrap;
+    cursor: pointer; 
+
+    .column{
+        flex:10%;
+        padding: 5px;
+        gap:3px;
+    }
+}
+
+@media (max-width: 800px){
+    .column{
+        flex:25%
+    }
+}
+
+@media(max-width: 600px){
+    .column{
+        flex:25%
+    }
+} 
+

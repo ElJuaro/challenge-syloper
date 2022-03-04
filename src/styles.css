@@ -1,0 +1,343 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  background-color: #021e34;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 64px;
+  width: 100%;
+  z-index: 10px;
+  -webkit-transition: top 0.2s linear;
+  transition: top 0.2s linear;
+}
+
+header form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 0 40px;
+}
+
+header div.content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header div.first-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: visible;
+}
+
+header div.second-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.dsc-carousel {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.dsc-carousel::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.48);
+}
+
+.dsc-carousel__content {
+  text-align: center;
+  width: 100%;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.dsc-carousel__content-item {
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: 1s all ease-in;
+  transition: 1s all ease-in;
+}
+
+.dsc-carousel__content-item h1 {
+  color: white;
+  font-weight: 900;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.dsc-carousel__content-item h1 span {
+  color: #FF8000;
+}
+
+.dsc-carousel__content-item p {
+  z-index: 1;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.dsc-carousel__btns {
+  position: absolute;
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dsc-carousel__btns > i {
+  opacity: 0.7;
+  color: #fff;
+  font-size: 45px;
+  cursor: pointer;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dsc-carousel__btns > i:hover {
+  opacity: 1;
+}
+
+.dsc-carousel__steps {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dsc-carousel__steps-step {
+  height: 8px;
+  width: 25px;
+  margin: 0 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  -webkit-transition: 0.75s all ease-in-out;
+  transition: 0.75s all ease-in-out;
+}
+
+.dsc-carousel__steps-step:hover, .dsc-carousel__steps-step-active {
+  opacity: 0.7;
+  background: #fff;
+}
+
+.container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 50px;
+}
+
+footer {
+  bottom: 0;
+  background-color: #021e34;
+  max-width: 100%;
+  width: 100vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  bottom: 0;
+}
+
+footer a {
+  color: #e8e6e3;
+  -webkit-text-decoration-color: initial;
+          text-decoration-color: initial;
+  text-decoration: none;
+  background: transparent;
+}
+
+footer nav {
+  font-size: .9em;
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+footer nav div {
+  margin-right: 40px;
+  min-width: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+footer nav .img-text {
+  text-align: right;
+  position: relative;
+  top: -36px;
+  right: 0px;
+}
+
+footer nav .img-text img {
+  width: 130px;
+  height: 94px;
+  display: block;
+  top: 0;
+  right: 0;
+}
+
+footer nav .img-text a.text {
+  position: relative;
+  top: 20px;
+  right: 110px;
+  font-size: 1.3em;
+  font-weight: bold;
+  display: inline-block;
+  word-wrap: break-word;
+  white-space: normal;
+  text-transform: uppercase;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 8px 16px;
+  -webkit-transition: linear .1s;
+  transition: linear .1s;
+  border-color: #303436;
+  background-color: #181a1b;
+  color: #2dd2fe;
+}
+
+footer nav h3 {
+  font-weight: bold;
+  font-size: 1.4em;
+  line-height: 1.4em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin: 0%;
+}
+
+footer nav ul {
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  -webkit-padding-start: 40px;
+          padding-inline-start: 40px;
+  margin: 0px;
+  padding: 0px;
+}
+
+footer nav ul li {
+  line-height: 1,6em;
+  max-width: 260px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/*# sourceMappingURL=styles.css.map */

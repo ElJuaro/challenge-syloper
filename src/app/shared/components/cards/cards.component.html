@@ -1,0 +1,11 @@
+
+<article class="cards">
+    <div class="column" *ngFor="let movies of movieObservable$ | async">
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top"  src="{{'https://image.tmdb.org/t/p/w500' + movies.poster_path }}" alt="{{movies.title}}}" (click)="mandarId(movies.id)">
+            <div class="card-body">
+              <p class="card-text">{{movies.title}} - {{movies.vote_average}}</p>
+            </div>
+          </div> 
+    </div>
+</article>
