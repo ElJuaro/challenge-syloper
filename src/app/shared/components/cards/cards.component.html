@@ -1,11 +1,16 @@
-
 <article class="cards">
-    <div class="column" *ngFor="let movies of movieObservable$ | async">
-        <div class="card" style="width: 15rem;">
+    <div class="column" *ngFor="let movies of movies; let i=index;">
+        <div *ngIf="movies.poster_path" class="card" style="width: 15rem;">
             <img class="card-img-top"  src="{{'https://image.tmdb.org/t/p/w500' + movies.poster_path }}" alt="{{movies.title}}}" (click)="mandarId(movies.id)">
             <div class="card-body">
               <p class="card-text">{{movies.title}} - {{movies.vote_average}}</p>
             </div>
+          </div> 
+          <div *ngIf="movies.cast_id && i < 5" class="card" style="width: 15rem;">
+            <img class="card-img-top"  src="{{'https://image.tmdb.org/t/p/w500' + movies.profile_path}}" alt="{{movies.title}}}" (click)="mandarId(movies.id)">
+            <div class="card-body">
+              <p class="card-text">{{movies.name}}</p>
+            </div> 
           </div> 
     </div>
 </article>

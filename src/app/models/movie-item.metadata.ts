@@ -4,7 +4,6 @@ export interface IMovieApi {
 }
 
 export interface IMovieApiResult{
-        json(): void;
         adult:boolean;
         backdrop_path: string;
         genre_ids:[],
@@ -20,4 +19,25 @@ export interface IMovieApiResult{
         vote_average:number;
         vote_count:number;  
         marginLeft: number;
+}
+
+export interface IMovieCredit{
+    id: number,
+    cast:[];
+}
+
+export interface IMovieCreditCast{
+    adult: boolean,
+    gender: number,
+    id: number,
+    known_for_department:  string,
+    name: string,
+    original_name: string,
+    popularity: number,
+    profile_path: string,
+    cast_id: number,
+    character: string,
+    credit_id: string,
+    order: number
+
 }

@@ -49,6 +49,7 @@ header{
 
     div.second-div{
         display: flex;
+        flex-direction: row;
         flex-wrap: nowrap;
         align-items: center;
         justify-content: flex-end;
@@ -273,4 +274,38 @@ i{
         flex:25%
     }
 } 
+
+.cardMovie{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    img{
+        border-radius: 10px;
+        height: 100%;
+        width:100%;
+    }
+    section{
+        margin: 0 5rem 2rem 5rem;
+    }
+    h5{
+        font-size: 2.2rem;
+    }
+    .link-home{
+        width:40%;
+        left: 115px;
+        font-size:1.3em;
+        font-weight: bold;
+        display:inline-block;
+        word-wrap: break-word;
+        white-space:normal;
+        text-transform: uppercase;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        padding: 8px 16px;
+        transition: linear .1s;
+        border-color: rgb(48,52,54);
+        background-color: rgb(24,26,27);
+        color: rgb(45,210,254);
+    }
+}
 

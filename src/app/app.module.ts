@@ -11,7 +11,6 @@ import { CardMovieComponent, CardsComponent, CarouselComponent, FooterComponent,
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule} from '@angular/common/http';
-import { SearchComponent } from './shared/components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +22,6 @@ import { SearchComponent } from './shared/components/search/search.component';
     FooterComponent,
     HeaderComponent,
     HomeComponent,
-    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +29,8 @@ import { SearchComponent } from './shared/components/search/search.component';
     FormsModule,
     CommonModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,19 +7,15 @@ import { MoviesService } from 'src/app/services/movies.service';
   selector: 'app-home',
   templateUrl: './home.component.html',
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent{
 
-   movies$: any = new Observable();
+   movieObservable$: any = new Observable();
+   public movies : any
 
-   
-  constructor(public moviesService : MoviesService) { 
-    this.movies$ = moviesService.getMovies;
-    /* moviesService.getAllMovies().subscribe(result => moviesService.setAllMovies(result)) */
-  }
-
-
-
-  ngOnInit(): void {
+  constructor(public _moviesService : MoviesService) { 
+    this.movieObservable$= _moviesService.getMovies().subscribe(data => {
+      this.movies = data;
+    });
   }
 
 }

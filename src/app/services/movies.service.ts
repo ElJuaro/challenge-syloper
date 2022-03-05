@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, map, Observable } from 'rxjs';
-import { IMovieApi, IMovieApiResult } from '../models/movie-item.metadata';
+import { IMovieApi, IMovieApiResult, IMovieCredit, IMovieCreditCast } from '../models/movie-item.metadata';
 
 @Injectable({
   providedIn: 'root'
@@ -28,6 +28,15 @@ export class MoviesService {
     return this.http.get<IMovieApiResult>(this.BASE_URL+ '/movie/' + id + 'videos?'+ this.API_KEY)
   }
 
+  getCreditsCast(id:any) : Observable<IMovieCreditCast[]>{
+    return this.http.get<IMovieCredit>(this.BASE_URL+ '/movie/' + id  + 'credits/'  + 'credits?'+ this.API_KEY)
+    .pipe(map((apiResult) => apiResult.cast))
+  }
+
+  getSearchMovie(search:any) : Observable<IMovieApiResult[]>{
+    return this.http.get<IMovieApi>(this.searchURL+'&query='+ search)
+    .pipe(map((apiResult) => apiResult.results))
+  }
 
   getMovies(): Observable<IMovieApiResult[]>{
     return this.observable$.asObservable();
@@ -36,7 +45,4 @@ export class MoviesService {
   setMovies(movies: IMovieApiResult[]): void{
     this.observable$.next(movies);
   }
-
-
-
 }

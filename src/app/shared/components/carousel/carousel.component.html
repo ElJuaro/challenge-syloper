@@ -2,7 +2,7 @@
     <ngb-carousel>
         <ng-template *ngFor="let movies of movies$ | async" ngbSlide>
           <div class="box">
-            <img class="img-responsive"src="{{'https://image.tmdb.org/t/p/w500' + movies.backdrop_path }}" alt="{{movies.title}}}">
+            <img class="img-responsive"src="{{'https://image.tmdb.org/t/p/w500' + movies.poster_path }}" alt="{{movies.title}}}">
           </div>
           <div class="info">
             <h3>{{movies.title}}</h3>

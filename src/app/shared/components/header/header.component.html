@@ -7,7 +7,8 @@
               </a>
           </div>
           <div class="second-div">
-            <app-search></app-search>
+              <input [(ngModel)]="search" class="form-control " type="text" placeholder="Busqueda" style="margin-right: 30px">
+              <button  class="btn btn-success" (click)="buscar()">Search</button>
           </div>     
     </nav>
   </div>
