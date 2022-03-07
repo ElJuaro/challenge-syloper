@@ -3,11 +3,11 @@
 </div>
 <div class="cardMovie">
   <section class="d-flex flex-column flex-wrap m-5">
-    <div class="d-flex flex-row flex-wrap  m-5" style="height: 400px; width: 100%;">
-      <div class="col-md-5 d-flex justify-content-center" style="height: 100%;">
+    <div class="d-flex flex-row flex-wrap mt-5" style="height: 400px; width: 100%;  background-image: url('https://image.tmdb.org/t/p/w500{{movieData.backdrop_path}}');background-repeat: no-repeat; background-size: cover; background-position: right -500px top; background: radial-gradient(circle, rgba(224,95,95,0.9136029411764706) 2%, rgba(59,23,23,1) 90%);">
+      <div class="col-md-5 d-flex justify-content-center" style="height: 100%; background-color: rgba(255, 0, 0, 0.534);background: linear-gradient(90deg, rgba(59,23,23,1) 61%, rgba(167,6,6,0) 70%);">
       <img src="{{'https://image.tmdb.org/t/p/w500' + movieData.poster_path}}" class="img-card" alt="{{movieData.title}}"> 
       </div>
-      <div class="col-md-8 ml-5 d-flex" style="width: 943px; padding-right: 100px; ">
+      <div class="col-md-8 ml-5 d-flex" style="width: 943px; padding-right: 100px;">
         <div class="d-flex flex-column flex-wrap">
           <h5 class="card-title">{{movieData.title}}</h5>
           <p class="card-text">{{movieData.overview}}</p>

@@ -5,7 +5,6 @@ import { FormsModule} from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import * as componentes from './components';
-import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
     imports: [
@@ -16,7 +15,7 @@ import { SearchComponent } from './components/search/search.component';
         NgbModule,
         HttpClientModule
     ],
-    declarations:[...componentes.components, SearchComponent],
+    declarations:[...componentes.components],
     exports:[
         FormsModule,
         CommonModule,

@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { map, Observable } from 'rxjs';
-import { IMovieApiResult } from 'src/app/models/movie-item.metadata';
-import { MoviesService } from 'src/app/services/movies.service';
+import {  Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-cards',
@@ -17,5 +15,5 @@ export class CardsComponent{
   mandarId(id:any){
     this.router.navigate(['movie', id])
   }
- 
+
 }

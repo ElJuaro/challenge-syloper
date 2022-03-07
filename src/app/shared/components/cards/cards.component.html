@@ -7,7 +7,7 @@
               <p class="card-text">{{movies.title}} - {{movies.vote_average}}</p>
             </div>
           </div> 
-          <div *ngIf="movies.cast_id && i < 6" class="card" style="width: 15rem;">
+          <div *ngIf="movies.profile_path && i < 6" class="card" style="width: 15rem;">
             <img class="card-img-top"  src="{{'https://image.tmdb.org/t/p/w500' + movies.profile_path}}" alt="{{movies.title}}" (click)="mandarId(movies.id)">
             <div class="card-body" style="background-color: #1c1e1f">
               <p class="card-text">{{movies.name}}</p>

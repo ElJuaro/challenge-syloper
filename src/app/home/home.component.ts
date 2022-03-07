@@ -1,25 +1,30 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { IMovieApiResult } from 'src/app/models/movie-item.metadata';
+import { AfterViewInit, Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { MoviesService } from 'src/app/services/movies.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
 })
-export class HomeComponent{
+export class HomeComponent implements AfterViewInit{
 
-   movieObservable$: any = new Observable();
    public movies : any
-   public hiden !: any
+   public valueSearch !: any
+   public hiden !: boolean
 
   constructor(public _moviesService : MoviesService) { 
-    this.movieObservable$= _moviesService.getMovies().subscribe(data => {
+    _moviesService.getMovies().subscribe(data => {
       this.movies = data;
     });
   }
 
-    Searching(value:boolean){
-    this.hiden = value;
+
+  ngAfterViewInit(): void {
+    this._moviesService.getBoolean().subscribe((result) => {
+      this.hiden = result;
+    })
+  }
+
+  searching(value:boolean){
+    this.valueSearch = value;
   }
 }

@@ -13,12 +13,10 @@ export class CarouselComponent {
     movies$: Observable<IMovieApiResult[]>
 
   constructor( private _movieService : MoviesService, private _config: NgbCarouselConfig) { 
-    //_config.pauseOnHover = true;
+    _config.pauseOnHover = true;
     this.movies$= _movieService.getAllMovies();
     this.movies$.subscribe(result => {
      _movieService.setMovies(result)
     });
   }
-
- 
 }

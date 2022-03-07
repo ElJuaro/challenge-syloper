@@ -8,7 +8,8 @@ import { IMovieApi, IMovieApiResult, IMovieCredit, IMovieCreditCast } from '../m
 })
 export class MoviesService {
 
-  observable$ = new BehaviorSubject<IMovieApiResult[]>([]);
+  private observable$ = new BehaviorSubject<IMovieApiResult[]>([]);
+  private searchinBoolean = new BehaviorSubject<boolean>(false);
 
   private API_KEY = 'api_key=bf4cbc9da8a46c3a1eb9bfafb62bc3fb';
   private BASE_URL = 'https://api.themoviedb.org/3';
@@ -38,11 +39,21 @@ export class MoviesService {
     .pipe(map((apiResult) => apiResult.results))
   }
 
+
+  ////////////////////////////////////////
   getMovies(): Observable<IMovieApiResult[]>{
     return this.observable$.asObservable();
   }
 
   setMovies(movies: IMovieApiResult[]): void{
     this.observable$.next(movies);
+  }
+
+  getBoolean() : BehaviorSubject<boolean>{
+    return this.searchinBoolean;
+  }
+
+  setBoolean(value:boolean){
+    this.searchinBoolean.next(value);
   }
 }

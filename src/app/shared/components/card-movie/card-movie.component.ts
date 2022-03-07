@@ -11,19 +11,18 @@ export class CardMovieComponent{
 
   public movieData : any
   public movieActors: any
-  public backGroundImg: any
+  public backgroundImage : any
   
-
   constructor(private activeRouter: ActivatedRoute, private movieService: MoviesService) {
     let movieId = this.activeRouter.snapshot.paramMap.get('id')
     movieService.getMovieId(movieId).pipe(
       mergeMap((movieData:any) => {
         this.movieData = movieData;
+        this.backgroundImage = "https://image.tmdb.org/t/p/w500" + this.movieData.backdrop_path;
         return this.movieService.getCreditsCast(movieId);
       }) 
     ).subscribe((movieActors) => {
       this.movieActors = movieActors
     }); 
-    
    }
 }
