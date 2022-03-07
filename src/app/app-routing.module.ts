@@ -6,11 +6,11 @@ import { HomeComponent } from './shared/components/home/home.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/movie/now/playing',
+    redirectTo: '/movie',
     pathMatch: 'full'  
   },
   {
-    path: 'movie/now/playing', component: HomeComponent
+    path: 'movie', component: HomeComponent
   },
   {
     path: 'movie/:id', component: CardMovieComponent,

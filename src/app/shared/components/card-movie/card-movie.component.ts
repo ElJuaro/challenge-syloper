@@ -11,6 +11,8 @@ export class CardMovieComponent{
 
   public movieData : any
   public movieActors: any
+  public backGroundImg: any
+  
 
   constructor(private activeRouter: ActivatedRoute, private movieService: MoviesService) {
     let movieId = this.activeRouter.snapshot.paramMap.get('id')
@@ -22,5 +24,6 @@ export class CardMovieComponent{
     ).subscribe((movieActors) => {
       this.movieActors = movieActors
     }); 
+    
    }
 }

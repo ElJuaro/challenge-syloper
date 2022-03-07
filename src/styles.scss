@@ -6,9 +6,6 @@ body{
     box-sizing: border-box;
 }
 
-.full-width{
-    width:100%
-}
 header{
     background-color: $color-primary;
     display: flex;
@@ -54,10 +51,29 @@ header{
         align-items: center;
         justify-content: flex-end;
     }
+    img{
+            border-radius: 10px;
+            height: 100%;
+            width:100%;
+    }
 }
 
-
-
+button{
+        width:40%;
+        left: 115px;
+        font-weight: bold;
+        display:inline-block;
+        text-transform: uppercase;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        padding: 5px 16px;
+        transition: linear .1s;
+        background-color: rgb(24,26,27);
+        color: rgb(45,210,254);
+}
+.full-width{
+    width:100%
+}
 .container{
     position:absolute;
     bottom:0;
@@ -68,98 +84,23 @@ header{
 }
   
 footer{
+    height: 150px;
     bottom: 0;
     background-color: $color-primary;
     max-width: 100%;
-    width: 100vw;
-    box-sizing: border-box;
-    padding: 0px;
-    background-position:center top;
-    background-size: cover;
-    background-repeat:no-repeat;
     display:flex;
     flex-wrap: wrap;
     align-items: center;
-    align-content: space-between;
     justify-content: center;
 
+    img{
+        width: 130px;
+        height:94px;
+        display:block;
+        top:0;
+        right:0;
 
-    a{
-        color:rgb(232,230,227);
-        text-decoration-color:initial;
-        text-decoration: none;
-        background: transparent;;
-    }
-
-    nav{
-    font-size: .9em;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 80px;
-    padding-bottom: 40px;
-        div{
-            margin-right: 40px;
-            min-width: 0;
-            box-sizing: border-box;
-        }
-        .img-text{
-            text-align: right;
-            position: relative;
-            top: -36px;
-            right:0px;
-            img{
-                width: 130px;
-                height:94px;
-                display:block;
-                top:0;
-                right:0;
-            }
-            a.text{
-                position: relative;
-                top: 20px;
-                right: 110px;
-                font-size:1.3em;
-                font-weight: bold;
-                display:inline-block;
-                word-wrap: break-word;
-                white-space:normal;
-                text-transform: uppercase;
-                border: 2px solid #fff;
-                border-radius: 5px;
-                padding: 8px 16px;
-                transition: linear .1s;
-                border-color: rgb(48,52,54);
-                background-color: rgb(24,26,27);
-                color: rgb(45,210,254);
-                }            
-        }
-        h3{
-            font-weight:bold;
-            font-size: 1.4em;
-            line-height: 1.4em;
-            text-transform: uppercase;
-            white-space: nowrap;
-            margin: 0%;
-        }
-        ul{
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-            padding-inline-start: 40px;
-            margin: 0px;
-            padding: 0px;
-
-            li{
-                line-height: 1,6em;
-                max-width: 260px;
-                white-space:nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-        } 
-    }
-
+    }   
 }
 
 
@@ -191,11 +132,8 @@ i{
                 color: rgb(45,210,254);
                           
     }
-    .div-carousel{
-        width:100%;
-    }
-    .div-cards{
-        width:100%;
+    .margin{
+        margin-top:-80px
     }
 } 
 
@@ -203,10 +141,8 @@ i{
 .carousel{
     display:flex;
     justify-content: center;
-    align-items:center;
     flex-direction: column;
     height:400px;
-    margin: 0 12.3rem 0 9rem;
     ngb-carousel{
         width: 100%;
     }
@@ -219,16 +155,15 @@ i{
     }
     .info{
         height: 150px;
+        width: 100%;
         position: absolute;
         bottom: 0;
         padding-top: 1.25rem;
         background-color: rgba(7, 4, 4, 0.473);
         h3{
             font-weight: bold;
-            font-size: 1.4em;
             line-height: 1.4em;
             text-transform: uppercase;
-            white-space: nowrap;
             margin: 0 10px;
         }
         p{
@@ -243,7 +178,7 @@ i{
             height: 100%;
             width: 100%;
             background-position: center;
-            background-size: cover;
+            background-size: fill;
             background-repeat: no-repeat;
             
         }
@@ -252,60 +187,72 @@ i{
 
 .cards{
     display:flex;
-    padding: 130px;
     flex-wrap:wrap;
     cursor: pointer; 
 
     .column{
-        flex:10%;
-        padding: 5px;
-        gap:3px;
+        display:flex;
+        flex-wrap: wrap;
+        flex:16%;
     }
 }
-
-@media (max-width: 800px){
-    .column{
-        flex:25%
-    }
-}
-
-@media(max-width: 600px){
-    .column{
-        flex:25%
-    }
-} 
 
 .cardMovie{
     display:flex;
     flex-wrap: wrap;
     flex-direction: column;
-    img{
-        border-radius: 10px;
-        height: 100%;
-        width:100%;
+    .img-card{
+            height: 100%;
+            width: 350px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 0.50rem;
     }
-    section{
-        margin: 0 5rem 2rem 5rem;
+    img footer{
+        border-radius: 10px;
+            height: 100%;
+            width:100%;
     }
     h5{
         font-size: 2.2rem;
     }
     .link-home{
-        width:40%;
+        width:160px;
         left: 115px;
         font-size:1.3em;
         font-weight: bold;
         display:inline-block;
-        word-wrap: break-word;
-        white-space:normal;
         text-transform: uppercase;
         border: 2px solid #fff;
         border-radius: 5px;
         padding: 8px 16px;
-        transition: linear .1s;
         border-color: rgb(48,52,54);
         background-color: rgb(24,26,27);
         color: rgb(45,210,254);
     }
+    .img-background{
+        height:665px;
+        background-image: url("https://carontestudio.com/img/caronte-web-estudio-logo.png");
+        background-repeat: repeat-y;
+        background-size: 10rem;
+    }
+    
+}
+.cards-actors{
+    height: 350px;
+    width: 100%;
+    border:5px;
+    margin: 0 3rem
+}
+.margen{
+    margin: 40px -36px 0 -4px;
+}
+.margen-footer{
+    margin-top: 80px;
+}
+
+.card-text{
+    background-color: rgba(71, 68, 68, 0.075);
 }
 

@@ -7,7 +7,8 @@ import { MoviesService } from 'src/app/services/movies.service';
 })
 export class HeaderComponent implements OnInit {
 
-  search !: string;
+  public search !: string;
+  public hidden !: boolean
   constructor(private movieService: MoviesService) { 
   }
 

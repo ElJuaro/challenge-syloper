@@ -1,26 +1,29 @@
-<div class="cardMovie">
-  <div class="border m-5">
-    <app-header></app-header>
-  </div>
-  <section>
-    <div class="card mb-3 d-flex flex-column " style="max-width: 100%; height: 600px;">
-            <div class="g-0 d-flex flex-row flex-wrap justify-content-center" style="height: 100%;">
-              <div class="col-md-4" style="height: 100%;">
-              <img src="{{'https://image.tmdb.org/t/p/w500' + movieData.poster_path}}" class="img-responsive" alt="{{movieData.title}}"> 
-              </div>
-              <div class="col-md-8 d-flex" style="width:500px">
-                <div class="card-body d-flex flex-column flex-wrap">
-                  <h5 class="card-title">{{movieData.title}}</h5>
-                  <p class="card-text">{{movieData.overview}}</p>
-                  <a class="link-home" href="/movie/now/playing">REGRESAR</a>
-                </div>
-              </div>
-            </div>
-            <div>
-              <app-cards [movies]="movieActors"></app-cards>
-            </div>
-      </div>
-    </section>
+<div class="m-2">
+  <app-header></app-header>
 </div>
+<div class="cardMovie">
+  <section class="d-flex flex-column flex-wrap m-5">
+    <div class="d-flex flex-row flex-wrap  m-5" style="height: 400px; width: 100%;">
+      <div class="col-md-5 d-flex justify-content-center" style="height: 100%;">
+      <img src="{{'https://image.tmdb.org/t/p/w500' + movieData.poster_path}}" class="img-card" alt="{{movieData.title}}"> 
+      </div>
+      <div class="col-md-8 ml-5 d-flex" style="width: 943px; padding-right: 100px; ">
+        <div class="d-flex flex-column flex-wrap">
+          <h5 class="card-title">{{movieData.title}}</h5>
+          <p class="card-text">{{movieData.overview}}</p>
+          <a class="link-home" href="/movie">REGRESAR</a>
+        </div>
+      </div>
+    </div>
+    <div class="cards-actors">
+          <h3>Peliculas</h3>
+         <app-cards [movies]="movieActors"></app-cards>
+    </div>
+  </section>
+</div>
+<div class="margen-footer">
+  <app-footer></app-footer>
+</div>
+
 
 
