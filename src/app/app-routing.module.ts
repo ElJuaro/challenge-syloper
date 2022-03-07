@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CardMovieComponent, CardsComponent } from './shared/components';
-import { HomeComponent } from './shared/components/home/home.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
@@ -10,15 +10,15 @@ const routes: Routes = [
     pathMatch: 'full'  
   },
   {
+     path: 'movie',
+     loadChildren:() => import('./home/models/home.module').then(m => m.HomeModule)
+  },
+  /* {
     path: 'movie', component: HomeComponent
   },
   {
     path: 'movie/:id', component: CardMovieComponent,
-  }
- /*  {
-    path: 'movie',
-    loadChildren:() => import('./lazyload/models/lazy-loaded.module').then(m => m.LazyLoadModule)
-  }, */
+  } */
 ];
 
 @NgModule({

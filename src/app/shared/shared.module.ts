@@ -1,28 +1,32 @@
-/* import { CommonModule } from "@angular/common";
+import { CommonModule } from "@angular/common";
+import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
 import { FormsModule} from "@angular/forms";
 import { RouterModule } from "@angular/router";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import * as componentes from './components';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
     imports: [
         FormsModule,
         CommonModule,
-        RouterModule
+        RouterModule,
+        FormsModule,
+        NgbModule,
+        HttpClientModule
     ],
-    declarations:[
-        componentes.CardsComponent, 
-        componentes.CarouselComponent, 
-        componentes.HeaderComponent, 
-        componentes.FooterComponent, 
-        componentes.HomeComponent
-    ],
+    declarations:[...componentes.components, SearchComponent],
     exports:[
         FormsModule,
         CommonModule,
         RouterModule,
+        FormsModule,
+        HttpClientModule,
+        NgbModule,
+        FormsModule,
         ...componentes.components
 
     ]
 })
-export class SharedModule{} */
+export class SharedModule{}

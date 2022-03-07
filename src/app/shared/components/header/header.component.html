@@ -2,13 +2,13 @@
   <div class="content">
     <nav class="navbar-light">
           <div class="first-div">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="/movie">
                   <img class="icon" src="/assets/logomovie.svg"/>
               </a>
           </div>
           <div class="second-div">
-              <input [(ngModel)]="search" class="form-control " type="text" placeholder="Busqueda" style="margin-right: 30px">
-              <button (click)="buscar()">Buscar</button>
+              <input #searchOn [(ngModel)]="search" class="form-control " type="text" placeholder="Busqueda" style="margin-right: 30px">
+              <button (click)="buscar(true)">Buscar</button>
           </div>     
     </nav>
   </div>
