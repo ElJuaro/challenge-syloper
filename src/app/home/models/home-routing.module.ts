@@ -4,8 +4,8 @@ import { CardMovieComponent } from 'src/app/shared/components';
 import { HomeComponent } from '../home.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent
-  },{path:':id', component: CardMovieComponent}
+  { path: '', component: HomeComponent},
+  {path:':id', component: CardMovieComponent}
 ];
 
 @NgModule({

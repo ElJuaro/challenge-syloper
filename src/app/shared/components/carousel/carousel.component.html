@@ -1,9 +1,9 @@
 <div class="carousel">
-  <h3>Cartelera</h3>
+  <h3 style="font-weight: 600;">Cartelera</h3>
     <ngb-carousel>
         <ng-template *ngFor="let movies of movies$ | async" ngbSlide>
           <div class="box">
-            <img src="{{'https://image.tmdb.org/t/p/w500' + movies.poster_path }}" alt="{{movies.title}}}">
+            <img src="{{'https://image.tmdb.org/t/p/w1280' + movies.poster_path}}">
           </div>
           <div class="info">
             <h3>{{movies.title}}</h3>

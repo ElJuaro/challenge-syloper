@@ -9,20 +9,20 @@ import { MoviesService } from 'src/app/services/movies.service';
 })
 export class CardMovieComponent{
 
-  public movieData : any
-  public movieActors: any
-  public backgroundImage : any
+  public movieData : any;
+  public movieActors: any;
+  public cardActors !: boolean;
   
   constructor(private activeRouter: ActivatedRoute, private movieService: MoviesService) {
     let movieId = this.activeRouter.snapshot.paramMap.get('id')
     movieService.getMovieId(movieId).pipe(
       mergeMap((movieData:any) => {
         this.movieData = movieData;
-        this.backgroundImage = "https://image.tmdb.org/t/p/w500" + this.movieData.backdrop_path;
+        this.cardActors = true;
         return this.movieService.getCreditsCast(movieId);
       }) 
     ).subscribe((movieActors) => {
-      this.movieActors = movieActors
+      this.movieActors = movieActors.filter((result) => result.profile_path != null);
     }); 
    }
 }

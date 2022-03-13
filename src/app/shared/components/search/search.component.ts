@@ -12,7 +12,8 @@ export class SearchComponent{
   public search: IMovieApiResult[] = [];
   @Output() searchOn : any = new EventEmitter<boolean>();
 
-  constructor(private movieService: MoviesService) {}
+  constructor(private movieService: MoviesService) {
+  }
 
   buscar(value : boolean){
     this.searchOn.emit(value)

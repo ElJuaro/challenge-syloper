@@ -13,12 +13,6 @@ const routes: Routes = [
      path: 'movie',
      loadChildren:() => import('./home/models/home.module').then(m => m.HomeModule)
   },
-  /* {
-    path: 'movie', component: HomeComponent
-  },
-  {
-    path: 'movie/:id', component: CardMovieComponent,
-  } */
 ];
 
 @NgModule({

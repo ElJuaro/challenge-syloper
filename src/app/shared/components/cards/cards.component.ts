@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import {  Router } from '@angular/router';
 
 
@@ -10,8 +10,10 @@ export class CardsComponent{
 
   
   @Input() movies !: any;
-  constructor(private router:Router) { }
-  
+  @Input() cardActors!: boolean;
+  constructor(private router:Router) {
+   }
+
   mandarId(id:any){
     this.router.navigate(['movie', id])
   }

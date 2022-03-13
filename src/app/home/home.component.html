@@ -1,14 +1,13 @@
 <app-header></app-header>
-<section class="mt-x ">
+<section class="mt-x">
     <div [ngClass]="{'show': hiden}">
     <app-carousel></app-carousel>
     </div>
     <div [ngClass]="{'show': !hiden}">
         <app-search (searchOn)="searching($event)"></app-search>
     </div> 
-    <div class="mb-2">
-        <h3 class="mt-4">Peliculas</h3>
-        <app-cards [movies]="movies"></app-cards> 
+    <div class="mb-2 mt-3">
+        <app-cards [movies]="movies" [cardActors]="false"></app-cards> 
     </div>
 </section>
 <app-footer></app-footer>
